@@ -1,0 +1,2 @@
+# vaults
+Some Ansible Vaults
