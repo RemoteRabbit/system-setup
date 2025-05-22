@@ -14,13 +14,13 @@
     - name: Copy private key
       copy:
         src: ../ssh/proton_priv
-        dest: "{{ ssh_dir }}/id_rsa"
+        dest: "{{ ssh_dir }}/proton_rsa"
         mode: '0600'
 
     - name: Copy public key
       copy:
         src: ../ssh/proton_pub
-        dest: "{{ ssh_dir }}/id_rsa.pub"
+        dest: "{{ ssh_dir }}/proton_rsa.pub"
         mode: '0644'
 
     - name: Set correct permissions on .ssh directory
