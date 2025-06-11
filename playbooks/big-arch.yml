@@ -1,0 +1,11 @@
+---
+- name: Setup Big Arch
+  hosts: localhost
+  tasks:
+    - name: Setup SSH
+      include_role:
+        name: ssh
+    - name: Dir Check
+      include_role:
+        name: repos
+    

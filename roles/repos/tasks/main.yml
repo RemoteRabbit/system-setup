@@ -1,0 +1,21 @@
+---
+- name: Ensure Repo Dirs
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}{{ item }}"
+    state: directory
+    mode: "0744"
+  loop:
+    - "/repos"
+    - "/repos/personal"
+    - "/repos/work"
+- name: Get Repos
+  ansible.builtin.git:
+    repo: "https://github.com/remoterabbit/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/repos/personal/{{ item }}"
+  loop:
+    - dot_files
+    - git
+    - nvim
+    - tmux
+    - wezterm
+    - zsh

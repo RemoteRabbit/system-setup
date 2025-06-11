@@ -1,0 +1,7 @@
+---
+- name: Setup Repo Dirs
+  hosts: all
+  tasks:
+    - name: Dir Check
+      include_role:
+        name: repos
