@@ -1,0 +1,5 @@
+[arch]
+localhost ansible_connection=local
+
+[mac]
+localhost ansible_connection=local
